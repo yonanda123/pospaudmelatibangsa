@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* ─── Google Fonts (fallback jika next/font gagal) ─────────────────────── */
+
+/* ─── CSS Variables ─────────────────────────────────────────────────────── */
+:root {
+    --background: #ffffff;
+    --foreground: #1a1a2e;
+
+    /* Pink palette */
+    --pink-50: #fff0f6;
+    --pink-100: #ffe0ee;
+    --pink-200: #ffc0db;
+    --pink-300: #ff91be;
+    --pink-400: #ff5fa0;
+    --pink-500: #f72585;
+    --pink-600: #d91a70;
+    --pink-700: #b5135c;
+
+    --fuchsia-400: #e879f9;
+    --fuchsia-500: #d946ef;
+    --rose-400: #fb7185;
+
+    /* Fonts */
+    --font-body: var(--font-nunito), "Nunito", "Poppins", sans-serif;
+    --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
+}
+
+/* ─── Theme via @theme ──────────────────────────────────────────────────── */
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-body);
+    --font-display: var(--font-display);
+}
+
+/* ─── Base Reset ────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* ─── Typography ────────────────────────────────────────────────────────── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-body);
+    font-weight: 900;
+    color: var(--foreground);
+}
+
+/* ─── Selection color ───────────────────────────────────────────────────── */
+::selection {
+    background: var(--pink-200);
+    color: var(--pink-700);
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--pink-50);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--pink-400);
+    border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--pink-500);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--pink-400) var(--pink-50);
+}
+
+/* ─── Focus ring ────────────────────────────────────────────────────────── */
+:focus-visible {
+    outline: 2px solid var(--pink-400);
+    outline-offset: 2px;
+}
+
+/* ─── Links ─────────────────────────────────────────────────────────────── */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ─── Images ────────────────────────────────────────────────────────────── */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ─── Smooth transitions for interactive elements ───────────────────────── */
+button,
+a,
+input,
+textarea,
+select {
+    transition: all 0.2s ease;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+input,
+textarea,
+select {
+    font-family: inherit;
+}
