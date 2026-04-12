@@ -1,29 +1,31 @@
 @import "tailwindcss";
 
-/* ─── Google Fonts (fallback jika next/font gagal) ─────────────────────── */
+/* ─── Google Fonts ──────────────────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap");
 
 /* ─── CSS Variables ─────────────────────────────────────────────────────── */
 :root {
     --background: #ffffff;
-    --foreground: #1a1a2e;
+    --foreground: #0a1628;
 
-    /* Pink palette */
-    --pink-50: #fff0f6;
-    --pink-100: #ffe0ee;
-    --pink-200: #ffc0db;
-    --pink-300: #ff91be;
-    --pink-400: #ff5fa0;
-    --pink-500: #f72585;
-    --pink-600: #d91a70;
-    --pink-700: #b5135c;
+    /* Blue palette — institutional deep blue */
+    --blue-darkest: #0a1628;
+    --blue-dark: #0d2149;
+    --blue-mid: #1a3a7c;
+    --blue-main: #1e4fc2;
+    --blue-light: #2563eb;
+    --blue-pale: #dbeafe;
+    --blue-50: #eff6ff;
 
-    --fuchsia-400: #e879f9;
-    --fuchsia-500: #d946ef;
-    --rose-400: #fb7185;
+    /* Orange accent */
+    --orange: #f97316;
+    --orange-dark: #ea6800;
+    --orange-light: #fdba74;
+    --gold: #fbbf24;
 
     /* Fonts */
     --font-body: var(--font-nunito), "Nunito", "Poppins", sans-serif;
-    --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
+    --font-display: var(--font-montserrat), "Montserrat", "Nunito", sans-serif;
 }
 
 /* ─── Theme via @theme ──────────────────────────────────────────────────── */
@@ -62,15 +64,15 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-body);
+    font-family: var(--font-display);
     font-weight: 900;
     color: var(--foreground);
 }
 
 /* ─── Selection color ───────────────────────────────────────────────────── */
 ::selection {
-    background: var(--pink-200);
-    color: var(--pink-700);
+    background: var(--blue-pale);
+    color: var(--blue-dark);
 }
 
 /* ─── Scrollbar ─────────────────────────────────────────────────────────── */
@@ -79,25 +81,25 @@ h6 {
     height: 6px;
 }
 ::-webkit-scrollbar-track {
-    background: var(--pink-50);
+    background: var(--blue-50);
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--pink-400);
+    background: var(--blue-main);
     border-radius: 99px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--pink-500);
+    background: var(--orange);
 }
 
 /* Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--pink-400) var(--pink-50);
+    scrollbar-color: var(--blue-main) var(--blue-50);
 }
 
 /* ─── Focus ring ────────────────────────────────────────────────────────── */
 :focus-visible {
-    outline: 2px solid var(--pink-400);
+    outline: 2px solid var(--orange);
     outline-offset: 2px;
 }
 
@@ -133,4 +135,15 @@ input,
 textarea,
 select {
     font-family: inherit;
+}
+
+/* ─── Input placeholder in dark form ───────────────────────────────────── */
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* ─── Utility classes used across page ─────────────────────────────────── */
+.font-display {
+    font-family: var(--font-display);
 }
