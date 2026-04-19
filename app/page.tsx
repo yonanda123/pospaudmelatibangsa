@@ -501,7 +501,7 @@ export default function Page() {
           <div className="relative hidden md:flex justify-center">
             <div className="relative float-anim-slow">
               <img
-                src="/screenshot_3.jpg"
+                src="/Screenshot_3.jpg"
                 alt="Pos PAUD Melati Bangsi"
                 className="w-full max-w-md h-72 object-cover rounded-2xl school-photo-frame"
               />
@@ -545,7 +545,7 @@ export default function Page() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
-                src="/screenshot_1.jpg"
+                src="/Screenshot_1.jpg"
                 alt="Kelas PAUD Melati Bangsi"
                 className="w-full h-80 object-cover rounded-2xl shadow-xl"
                 style={{ border: "3px solid rgba(30,79,194,0.2)" }}
